@@ -46,22 +46,18 @@
     self.backButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.backButton setEnabled:NO];
     [self.backButton setTitle:NSLocalizedString(@"Back", @"Back Command") forState:UIControlStateNormal];
-    [self.backButton addTarget:self.webview action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     
     self.forwardButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.forwardButton setEnabled:NO];
     [self.forwardButton setTitle:NSLocalizedString(@"Forward", @"Forward Command") forState:UIControlStateNormal];
-    [self.backButton addTarget:self.webview action:@selector(goForward) forControlEvents:UIControlEventTouchUpInside];
     
     self.reloadButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.reloadButton setEnabled:NO];
     [self.reloadButton setTitle:NSLocalizedString(@"Reload", @"Reload Command") forState:UIControlStateNormal];
-    [self.reloadButton addTarget:self.webview action:@selector(reload) forControlEvents:UIControlEventTouchUpInside];
     
     self.stopButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.stopButton setEnabled:NO];
     [self.stopButton setTitle:NSLocalizedString(@"Stop", @"Stop Command") forState:UIControlStateNormal];
-    [self.stopButton addTarget:self.webview action:@selector(stopLoading) forControlEvents:UIControlEventTouchUpInside];
     
     for (UIView *viewToAdd in @[self.webview, self.textField, self.backButton, self.forwardButton, self.stopButton, self.reloadButton]) {
         [mainView addSubview:viewToAdd];
@@ -71,6 +67,9 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
 
     self.view = mainView;
+    [self addButtonTargets];
+    // This is where I am calling the welcome message, maybe there is better place....
+    [self welcomeMessage];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -164,10 +163,43 @@
     self.backButton.enabled = [self.webview canGoBack];
     self.forwardButton.enabled = [self.webview canGoForward];
     self.stopButton.enabled = self.webview.isLoading;
-    self.reloadButton.enabled = !self.webview.isLoading;
+    self.reloadButton.enabled = !self.webview.isLoading && self.webview.request.URL;
 //    NSLog(@"Framecount = %d", (int)self.frameCount);
 //    NSLog(@"canGoForward = %d", (int)self.webview.canGoForward);
 //    NSLog(@"canGoBack = %d", (int)self.webview.canGoBack);
+}
+
+- (void)resetWebView {
+    [self.webview removeFromSuperview];
+    
+    UIWebView *newWebView = [[UIWebView alloc] init];
+    newWebView.delegate = self;
+    [self.view addSubview:newWebView];
+    
+    self.webview = newWebView;
+    [self addButtonTargets];
+    self.textField.text = nil;
+    [self updateButtonsAndTitle];
+}
+
+- (void)addButtonTargets {
+    for (UIButton *button in @[self.backButton, self.forwardButton, self.stopButton, self.reloadButton]) {
+        [button removeTarget:nil action:NULL forControlEvents:UIControlEventTouchUpInside];
+    }
+    [self.backButton addTarget:self.webview action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [self.backButton addTarget:self.webview action:@selector(goForward) forControlEvents:UIControlEventTouchUpInside];
+    [self.reloadButton addTarget:self.webview action:@selector(reload) forControlEvents:UIControlEventTouchUpInside];
+    [self.stopButton addTarget:self.webview action:@selector(stopLoading) forControlEvents:UIControlEventTouchUpInside];
+
+}
+
+- (void)welcomeMessage {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Welcome", @"welcome title")
+                                                    message:NSLocalizedString(@"Get excited to use the best browser in the market", @"browser description text")
+                                                   delegate:nil cancelButtonTitle:NSLocalizedString(@"OK, I am ready", @"Welcome button title")
+                                          otherButtonTitles: nil];
+    [alert show];
+
 }
 
 @end

@@ -10,4 +10,7 @@
 
 @interface BlocBrowserViewController : UIViewController
 
+- (void)resetWebView;
+- (void)welcomeMessage;
+
 @end
