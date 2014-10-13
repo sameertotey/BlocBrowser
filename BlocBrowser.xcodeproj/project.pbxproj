@@ -13,6 +13,7 @@
 		052207B619E8E85900B4FDED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 052207B419E8E85900B4FDED /* LaunchScreen.xib */; };
 		052207C219E8E85A00B4FDED /* BlocBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 052207C119E8E85A00B4FDED /* BlocBrowserTests.m */; };
 		052207CB19E953D700B4FDED /* BlocBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052207CA19E953D700B4FDED /* BlocBrowserViewController.m */; };
+		052207CE19EA047C00B4FDED /* AwesomeFloatingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 052207CD19EA047C00B4FDED /* AwesomeFloatingToolbar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		052207C119E8E85A00B4FDED /* BlocBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocBrowserTests.m; sourceTree = "<group>"; };
 		052207C919E953D700B4FDED /* BlocBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocBrowserViewController.h; sourceTree = "<group>"; };
 		052207CA19E953D700B4FDED /* BlocBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocBrowserViewController.m; sourceTree = "<group>"; };
+		052207CC19EA047C00B4FDED /* AwesomeFloatingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeFloatingToolbar.h; sourceTree = "<group>"; };
+		052207CD19EA047C00B4FDED /* AwesomeFloatingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeFloatingToolbar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 			children = (
 				052207C919E953D700B4FDED /* BlocBrowserViewController.h */,
 				052207CA19E953D700B4FDED /* BlocBrowserViewController.m */,
+				052207CC19EA047C00B4FDED /* AwesomeFloatingToolbar.h */,
+				052207CD19EA047C00B4FDED /* AwesomeFloatingToolbar.m */,
 				052207A919E8E85900B4FDED /* AppDelegate.h */,
 				052207AA19E8E85900B4FDED /* AppDelegate.m */,
 				052207B219E8E85900B4FDED /* Images.xcassets */,
@@ -217,6 +222,7 @@
 				052207AB19E8E85900B4FDED /* AppDelegate.m in Sources */,
 				052207CB19E953D700B4FDED /* BlocBrowserViewController.m in Sources */,
 				052207A819E8E85900B4FDED /* main.m in Sources */,
+				052207CE19EA047C00B4FDED /* AwesomeFloatingToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

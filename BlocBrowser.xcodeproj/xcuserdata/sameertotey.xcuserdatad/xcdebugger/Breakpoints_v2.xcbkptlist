@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BlocBrowser/BlocBrowserViewController.m"
-            timestampString = "434766551.338498"
+            filePath = "BlocBrowser/AwesomeFloatingToolbar.m"
+            timestampString = "434855337.099006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "-textFieldShouldReturn:"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BlocBrowser/BlocBrowserViewController.m"
-            timestampString = "434766551.338498"
+            filePath = "BlocBrowser/AwesomeFloatingToolbar.m"
+            timestampString = "434851659.156962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-textFieldShouldReturn:"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-setEnabled:forButtonWithTitle:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BlocBrowser/BlocBrowserViewController.m"
-            timestampString = "434766516.687164"
+            filePath = "BlocBrowser/AwesomeFloatingToolbar.m"
+            timestampString = "434854490.576706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
-            landmarkName = "-welcomeMessage"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-touchesBegan:withEvent:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlocBrowser/AwesomeFloatingToolbar.m"
+            timestampString = "434854717.681341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-labelFromTouches:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
